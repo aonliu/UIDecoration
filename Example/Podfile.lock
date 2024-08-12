@@ -1,6 +1,6 @@
 PODS:
   - SnapKit (5.6.0)
-  - UIDecoration (0.1.0)
+  - UIDecoration (0.1.1)
   - YYText (1.0.7)
 
 DEPENDENCIES:
@@ -19,7 +19,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
-  UIDecoration: f15fbc9e12874fa0cb3ccbd2f782fb92005c6731
+  UIDecoration: f9885e9aaca55cffa7314a091a51f1eedf305e1f
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
 PODFILE CHECKSUM: 8655bcaff513a6e7a71b70117c54419ead75670e
