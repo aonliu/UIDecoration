@@ -651,11 +651,15 @@ public extension DecorationItem {
     
     @discardableResult func lines(_ value: Int) -> DecorationItem {
         copyPush { view in
-            if let element = view as? UIButton {
-                element.titleLabel?.numberOfLines = value
-            }
-            if view is TextContainer {
-                view.setValue(value, forKey: "numberOfLines")
+            if let expand = view as? DecorationExtend,  expand.responds(to: #selector(DecorationExtend.linesExtend(_:)))  {
+                expand.linesExtend?(value)
+            }else {
+                if let element = view as? UIButton {
+                    element.titleLabel?.numberOfLines = value
+                }
+                if view is TextContainer {
+                    view.setValue(value, forKey: "numberOfLines")
+                }
             }
         }
     }
@@ -1114,6 +1118,7 @@ public extension DecorationItem {
     @objc optional func colorExtend(_ value: UIColor)
     @objc optional func axisExtend(_ value: NSLayoutConstraint.Axis)
     @objc optional func spaceExtend(_ value: CGFloat)
+    @objc optional func linesExtend(_ value: Int)
 }
 
 public typealias DecorationKey = String
