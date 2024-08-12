@@ -275,6 +275,10 @@ public extension DecorationItem {
             view.layer.shadowOffset = value.offset
         }
     }
+    
+    @discardableResult func shadow(color: UIColor, blur: CGFloat, offset: CGSize) -> DecorationItem {
+        shadow(.init(color: color, blur: blur, offset: offset))
+    }
 }
 /// ImageView相关
 public extension DecorationItem {
