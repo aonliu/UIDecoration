@@ -5,7 +5,7 @@
 //  Created by  刘剑云 on 2024/8/9.
 //
 
-import Foundation
+import UIKit
 
 public extension UIView {
     @discardableResult func insert<T: UIView>(_ view: T) -> T {

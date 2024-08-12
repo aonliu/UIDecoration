@@ -111,7 +111,7 @@ label.decoration(.r.text("this is text").r14.color(.black))
 ### Create Custom DecorationItem
 You can use copyPush function to create custom DecorationItem, eg: create a text2(_ value: String?)
 ```swift
-// extension Decoration to YYLabel
+// create custome decorationItem text2
 extension DecorationItem {
     @discardableResult func text2(_ value: String?) -> DecorationItem {
         /// set copyPush key and function, is not set key, key will use #function

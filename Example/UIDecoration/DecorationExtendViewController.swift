@@ -68,6 +68,10 @@ extension YYLabel: DecorationExtend {
         self.textColor = value
     }
     
+    public func textExtend(_ value: String?) {
+        self.text = value
+    }
+    
     public func attributedTextExtend(_ value: NSAttributedString?) {
         self.attributedText = value
     }

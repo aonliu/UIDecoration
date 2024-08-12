@@ -946,10 +946,24 @@ public extension DecorationItem {
             }
         }
     }
+    @discardableResult func verticalIndicatorInsets(_ value: UIEdgeInsets) -> DecorationItem {
+        copyPush { view in
+            if let element = view as? UIScrollView {
+                element.verticalScrollIndicatorInsets = value
+            }
+        }
+    }
     @discardableResult func horizontalIndicator(_ value: Bool) -> DecorationItem {
         copyPush { view in
             if let element = view as? UIScrollView {
                 element.showsHorizontalScrollIndicator = value
+            }
+        }
+    }
+    @discardableResult func horizontalIndicatorInsets(_ value: UIEdgeInsets) -> DecorationItem {
+        copyPush { view in
+            if let element = view as? UIScrollView {
+                element.horizontalScrollIndicatorInsets = value
             }
         }
     }
