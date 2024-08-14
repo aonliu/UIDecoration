@@ -21,7 +21,12 @@ target '<Your Target Name>' do
     pod 'UIDecoration'
 end
 ```
-
+### Swift Package Manager
+```ruby
+dependencies: [
+    .package(url: "https://github.com/aonliu/UIDecoration.git", .upToNextMajor(from: "0.1.1"))
+]
+```
 ## Usage
 
 ### Direct use decoration to view
@@ -30,11 +35,13 @@ Just set a DecorationItem object to decoration function will set style，in gene
 
 ```swift
 let label = UILabel()
-/// decoration —— font: regular12, textColor: black, textAlignment: center, numberOfLines: 0
-label.decoration(.r.r12.color(.black).align(.center).unlimited)
+/// create a decorationItem —— font: regular12, textColor: black, textAlignment: center, numberOfLines: 0
+let labelItem: DecorationItem = .r.r12.color(.black).align(.center).unlimited
+/// set decoration
+label.decoration(labelItem)
 
 let view = UIView.init()
-/// decoration —— backgroundColor: orange, isUserInteractionEnabled: false
+/// of course, can create decorationItem in decoration function
 view.decoration(.r.ground(.orange).unInteraction)
 ```
 Some decoration have different feature，such as：text(_ value: String?) will set text to UILabel, will set normal title to UIButton; font(_ value: UIFont?) will set font to UILabel, will set UIButtonTitleLabel font to UIButton;
@@ -50,13 +57,16 @@ button.decoration(.r.text("this is text").font(.r10))
 ```
 Each decorator only works for valid views，such as：text(_ value: String?) is effective to UILabel, UITextField, UITextView, UIButton, but still can set decoration to other type view，it just invalid and will not crash
 ```swift
+
+let viewItem: DecorationItem = .r.ground(.red).text("this is text").font(.r10)
+
 let label = UILabel()
-/// decoration —— backgroundColor:red, text: "this is text", font: regular10
-label.decoration(.r.ground(.red).text("this is text").font(.r10))
+/// set decoration —— backgroundColor, text, font
+label.decoration(viewItem)
 
 let view = UIView()
-/// decoration —— backgroundColor:orange, text and font not support
-view.decoration(.r.ground(.orange).text("this is text").font(.r10))
+/// set decoration —— backgroundColor, but text, font not support to UIView
+view.decoration(viewItem)
 ```
 
 ### Extract universal objects
