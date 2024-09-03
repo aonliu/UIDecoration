@@ -42,7 +42,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             self.navigationController?.pushViewController(CommonUseViewController(), animated: true)
-        }else {
+        }else if indexPath.row == 1 {
             self.navigationController?.pushViewController(DecorationExtendViewController(), animated: true)
         }
     }

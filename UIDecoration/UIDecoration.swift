@@ -1148,6 +1148,29 @@ public extension DecorationItem {
 }
 
 public extension DecorationItem {
+    var radius6: DecorationItem { radius(6) }
+    var radius7: DecorationItem { radius(7) }
+    var radius8: DecorationItem { radius(8) }
+    var radius9: DecorationItem { radius(9) }
+    var radius10: DecorationItem { radius(10) }
+    var radius11: DecorationItem { radius(11) }
+    var radius12: DecorationItem { radius(12) }
+    var radius13: DecorationItem { radius(13) }
+    var radius14: DecorationItem { radius(14) }
+    var radius15: DecorationItem { radius(15) }
+    var radius16: DecorationItem { radius(16) }
+    var radius17: DecorationItem { radius(17) }
+    var radius18: DecorationItem { radius(18) }
+    var radius19: DecorationItem { radius(19) }
+    var radius20: DecorationItem { radius(20) }
+    var radius21: DecorationItem { radius(21) }
+    var radius22: DecorationItem { radius(22) }
+    var radius23: DecorationItem { radius(23) }
+    var radius24: DecorationItem { radius(24) }
+    var radius25: DecorationItem { radius(25) }
+}
+
+public extension DecorationItem {
     /// set pageIndicatorTintColor to UIPageControl
     @discardableResult func indicatorColor(_ value: UIColor) -> DecorationItem {
         copyPush { view in

@@ -24,7 +24,7 @@ end
 ### Swift Package Manager
 ```ruby
 dependencies: [
-    .package(url: "https://github.com/aonliu/UIDecoration.git", .upToNextMajor(from: "0.1.1"))
+    .package(url: "https://github.com/aonliu/UIDecoration.git", .upToNextMajor(from: "0.1.2"))
 ]
 ```
 ## Usage
